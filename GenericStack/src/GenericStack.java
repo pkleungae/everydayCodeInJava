@@ -38,15 +38,19 @@ public class GenericStack<E> {
 		
 		else {
 			tmpList = (E[])new Object[size*2];
-			int i = 0;
-			for (E tmp :list) {
-				tmpList[i] = tmp;
-				i++;
-			}
-			
+//			int i = 0;
+//			for (E tmp :list) {
+//				tmpList[i] = tmp;
+//				i++;
+//			}
+//			
+//			tmpList[size]= o;
+//			list = tmpList;
+//		setSize();
+			System.arraycopy(list, 0, tmpList, 0, list.length);
 			tmpList[size]= o;
 			list = tmpList;
-		setSize();
+			setSize();
 		}
 	}
 	
